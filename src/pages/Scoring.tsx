@@ -112,8 +112,8 @@ const levels = [
 
 const progressPercentage = (currentScore / maxScore) * 100;
 
-const CO2_PER_UNIT_SCORE = 0.475 / 10;
-const co2Savings = (currentScore * CO2_PER_UNIT_SCORE).toFixed(2);
+const safeScore = Number(currentScore) || 0;
+const co2Savings = (safeScore / 10 * 0.475).toFixed(2);
 
   return (
     <div className="min-h-screen bg-background">
