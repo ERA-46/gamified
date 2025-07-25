@@ -20,12 +20,13 @@ const Scoring = () => {
   const nextLevel = "Sustainability Novice";
   
   const badges = [
-    { id: 1, name: "Eco-Explorer", icon: "1.jpeg", color: "bg-green-500", minScore: 0 },
-    { id: 2, name: "Sustainability Novice", icon: "2.jpeg", color: "bg-blue-500", minScore: 100 },
-    { id: 3, name: "Resource Optimizer", icon: "4.jpeg", color: "bg-yellow-500", minScore: 200 },
-    { id: 4, name: "Cloud Steward", icon: "3.jpeg", color: "bg-purple-500", minScore: 300 },
-    { id: 5, name: "Green Innovator", icon: "5.jpeg", color: "bg-emerald-600", minScore: 400 }
+    { id: 1, name: "Eco-Explorer", icon: "/icons/1.jpeg", color: "bg-green-500", minScore: 0 },
+    { id: 2, name: "Sustainability Novice", icon: "/icons/2.jpeg", color: "bg-blue-500", minScore: 100 },
+    { id: 3, name: "Resource Optimizer", icon: "/icons/4.jpeg", color: "bg-yellow-500", minScore: 200 },
+    { id: 4, name: "Cloud Steward", icon: "/icons/3.jpeg", color: "bg-purple-500", minScore: 300 },
+    { id: 5, name: "Green Innovator", icon: "/icons/5.jpeg", color: "bg-emerald-600", minScore: 400 }
   ];
+
 
   const rankings = [
     { rank: 1, name: "John K", score: 480, level: "Global Sustainability Leader" },
