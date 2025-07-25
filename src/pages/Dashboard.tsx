@@ -71,12 +71,40 @@ const Dashboard = () => {
       <Navigation />
       
       <div className="container mx-auto p-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2">Welcome, Admin!</h1>
-          <p className="text-muted-foreground">
-            Select a service to get started with your cloud infrastructure
+      <div className="mb-12">
+        <h1 className="text-4xl font-extrabold text-primary mb-4 mt-8">Welcome!</h1>
+      </div>
+
+      <div className="bg-card p-8 rounded-2xl shadow-lg mb-10">
+        <h2 className="text-3xl font-bold text-foreground mb-6 border-b border-muted pb-2">
+          Survey Description
+        </h2>
+        <div className="space-y-6 text-muted-foreground text-base leading-relaxed">
+          <p>
+            This survey is part of an academic research project for the <strong>Applied Research Project</strong> module at <strong>Douglas College</strong>. The purpose of this study is to explore how <strong>gamification</strong> influences users' environmentally conscious decision-making in <strong>cloud computing environments</strong>.
+          </p>
+
+          <p>
+            In this version, you will interact with a <strong>gamified cloud deployment dashboard</strong>. Your task is to <strong>create a virtual machine (VM)</strong> suitable for storing a <strong>1GB file</strong>. The dashboard includes gamification elements such as <strong>points, badges, levels</strong>, and <strong>progress indicators</strong> designed to guide and motivate your decisions.
+          </p>
+
+          <p>
+            Please complete the task as you naturally would, relying on the interface and feedback mechanisms provided.
+          </p>
+
+          <p>
+            All responses will remain completely confidential. Participation is entirely voluntary, and you may withdraw your data at any time by contacting us. By continuing and submitting your responses, you provide <strong>informed consent</strong> to participate in this study.
+          </p>
+
+          <p>
+            Your data will be used exclusively for educational and research purposes within this course. It will be securely stored in accordance with academic research ethics. No personal or identifying information will be collected or disclosed.
+          </p>
+
+          <p className="text-center font-semibold text-primary">
+            Thank you for your valuable time and thoughtful participation.
           </p>
         </div>
+      </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
