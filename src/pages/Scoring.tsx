@@ -20,11 +20,11 @@ const Scoring = () => {
   const nextLevel = "Sustainability Novice";
   
   const badges = [
-    { id: 1, name: "Eco-Explorer", icon: "/icons/1.jpeg", color: "bg-green-500", minScore: 0 },
-    { id: 2, name: "Sustainability Novice", icon: "/icons/2.jpeg", color: "bg-blue-500", minScore: 100 },
-    { id: 3, name: "Resource Optimizer", icon: "/icons/4.jpeg", color: "bg-yellow-500", minScore: 200 },
-    { id: 4, name: "Cloud Steward", icon: "/icons/3.jpeg", color: "bg-purple-500", minScore: 300 },
-    { id: 5, name: "Green Innovator", icon: "/icons/5.jpeg", color: "bg-emerald-600", minScore: 400 }
+    { id: 1, name: "Eco-Explorer", icon: "1.jpeg", color: "bg-green-500", minScore: 0 },
+    { id: 2, name: "Sustainability Novice", icon: "2.jpeg", color: "bg-blue-500", minScore: 100 },
+    { id: 3, name: "Resource Optimizer", icon: "4.jpeg", color: "bg-yellow-500", minScore: 200 },
+    { id: 4, name: "Cloud Steward", icon: "3.jpeg", color: "bg-purple-500", minScore: 300 },
+    { id: 5, name: "Green Innovator", icon: "5.jpeg", color: "bg-emerald-600", minScore: 400 }
   ];
 
 
@@ -110,7 +110,10 @@ const levels = [
 ];
 
 
-  const progressPercentage = (currentScore / maxScore) * 100;
+const progressPercentage = (currentScore / maxScore) * 100;
+
+const CO2_PER_UNIT_SCORE = 0.475 / 10;
+const co2Savings = (currentScore * CO2_PER_UNIT_SCORE).toFixed(2);
 
   return (
     <div className="min-h-screen bg-background">
@@ -154,7 +157,7 @@ const levels = [
                   <div key={badge.id} className="flex flex-col items-center relative">
                     <div className={`relative w-16 h-16 rounded-full flex items-center justify-center ${earned ? badge.color : 'bg-gray-300 opacity-50'}`}>
                       <img
-                        src={`/src/images/${badge.icon}`}
+                        src={`/icons/${badge.icon}`}
                         alt={badge.name}
                         className="w-full h-full object-cover rounded-full"
                       />
@@ -183,8 +186,9 @@ const levels = [
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              So far you have saved ____ CO2 to the world by using greener decisions. Keep it up.
+              So far you have saved {co2Savings} kgCO₂e to the world by using greener decisions. Keep it up.
             </p>
+
           </CardContent>
         </Card>
 
